@@ -1,5 +1,21 @@
 /* =========================
-   RESET & GLOBAL
+   VARIABLES
+========================= */
+
+:root {
+  --cream: #f3f0e8;
+  --paper: #faf8f2;
+  --charcoal: #1d1d1b;
+  --muted: #66645e;
+  --line: #c9c5ba;
+
+  --olive: #596052;
+  --denim: #4f6472;
+  --burgundy: #713c3c;
+}
+
+/* =========================
+   RESET
 ========================= */
 
 * {
@@ -13,23 +29,48 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.6;
-  color: #171717;
-  background-color: #ffffff;
+
+  color: var(--charcoal);
+  background-color: var(--cream);
 }
 
 a {
   color: inherit;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
 section {
-  padding: 100px 8%;
+  padding: 110px 8%;
+}
+
+.section-label {
+  margin-bottom: 15px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: var(--muted);
 }
 
 section h2 {
-  margin-bottom: 40px;
-  font-size: 2.2rem;
+  margin-bottom: 35px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
 }
 
 /* =========================
@@ -41,10 +82,11 @@ header {
   top: 0;
   z-index: 1000;
 
-  padding: 20px 8%;
+  padding: 18px 8%;
 
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #e5e5e5;
+  background-color: rgba(243, 240, 232, 0.94);
+
+  border-bottom: 1px solid var(--line);
 }
 
 nav {
@@ -53,25 +95,27 @@ nav {
   align-items: center;
 }
 
-nav > a {
-  font-size: 1.4rem;
-  font-weight: bold;
+.logo {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
   text-decoration: none;
 }
 
-nav div {
+.nav-links {
   display: flex;
-  gap: 30px;
+  gap: 28px;
+
+  list-style: none;
 }
 
-nav div a {
+.nav-links a {
+  font-size: 0.9rem;
   text-decoration: none;
-  color: #444;
-  transition: color 0.2s ease;
 }
 
-nav div a:hover {
-  color: #000;
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
 /* =========================
@@ -79,53 +123,70 @@ nav div a:hover {
 ========================= */
 
 #hero {
-  min-height: 85vh;
+  min-height: 88vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-label {
+  margin-bottom: 25px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  color: var(--olive);
 }
 
 #hero h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 1;
-  margin-bottom: 15px;
+  max-width: 1000px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 400;
+  line-height: 0.9;
 }
 
-#hero h2 {
-  font-size: clamp(1.5rem, 3vw, 2.2rem);
-  font-weight: normal;
-  margin-bottom: 25px;
-  color: #555;
+.hero-subtitle {
+  margin-top: 30px;
+
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: var(--muted);
 }
 
-#hero p {
+.hero-description {
   max-width: 650px;
-  margin-bottom: 35px;
-  font-size: 1.1rem;
-  color: #555;
+  margin-top: 20px;
+
+  color: var(--muted);
 }
 
-#hero a {
-  display: inline-block;
+.hero-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
 
-  padding: 13px 22px;
+.hero-links a {
+  padding: 10px 18px;
 
-  background-color: #171717;
-  color: white;
+  border: 1px solid var(--charcoal);
 
   text-decoration: none;
-  border-radius: 6px;
 
   transition:
-    transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-#hero a:hover {
-  background-color: #333;
-  transform: translateY(-2px);
+.hero-links a:hover {
+  background-color: var(--charcoal);
+  color: var(--cream);
 }
 
 /* =========================
@@ -133,51 +194,89 @@ nav div a:hover {
 ========================= */
 
 #about {
-  background-color: #f7f7f7;
+  background-color: var(--paper);
 }
 
-#about p {
-  max-width: 750px;
+.about-content {
+  max-width: 800px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+
   font-size: 1.1rem;
-  color: #444;
+  color: #4f4e49;
 }
 
 /* =========================
    PROJECTS
 ========================= */
 
-#projects > div {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
+#projects {
+  border-top: 1px solid var(--line);
 }
 
-#projects article {
-  flex: 1;
-  min-width: 280px;
+.project-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 25px;
+}
+
+.project-card {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   padding: 30px;
 
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
 
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
-#projects article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+.project-card:hover {
+  transform: translateY(-4px);
 }
 
-#projects article h3 {
-  margin-bottom: 10px;
-  font-size: 1.4rem;
+.project-number {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
 }
 
-#projects article p {
-  color: #555;
+.project-card h3 {
+  margin-top: 30px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.project-card p {
+  margin-top: 10px;
+  color: var(--muted);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  margin-top: 25px;
+}
+
+.project-tags span {
+  padding: 4px 9px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+
+  border: 1px solid var(--line);
 }
 
 /* =========================
@@ -185,32 +284,57 @@ nav div a:hover {
 ========================= */
 
 #skills {
-  background-color: #f7f7f7;
+  background-color: var(--olive);
+  color: var(--cream);
 }
 
-#skills ul {
+#skills .section-label {
+  color: #d9dccf;
+}
+
+.skills-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 
   list-style: none;
 }
 
-#skills li {
-  padding: 8px 16px;
+.skills-list li {
+  padding: 8px 14px;
 
-  border: 1px solid #ccc;
-  border-radius: 20px;
+  border: 1px solid rgba(243, 240, 232, 0.5);
 
-  background-color: white;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
 }
 
 /* =========================
    CONTACT
 ========================= */
 
-#contact p {
-  margin-bottom: 10px;
+#contact {
+  min-height: 60vh;
+}
+
+.contact-text {
+  max-width: 650px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+}
+
+.contact-links {
+  display: flex;
+  gap: 25px;
+
+  margin-top: 35px;
+}
+
+.contact-links a {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.85rem;
 }
 
 /* =========================
@@ -218,12 +342,13 @@ nav div a:hover {
 ========================= */
 
 footer {
-  padding: 30px 8%;
+  padding: 25px 8%;
 
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--line);
 
-  text-align: center;
-  color: #666;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
 }
 
 /* =========================
@@ -231,26 +356,118 @@ footer {
 ========================= */
 
 @media (max-width: 700px) {
+  section {
+    padding: 80px 6%;
+  }
+
   header {
-    padding: 18px 20px;
+    padding: 15px 6%;
   }
 
   nav {
-    flex-direction: column;
-    gap: 15px;
+    align-items: flex-start;
   }
 
-  nav div {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
+  .nav-links {
+    gap: 12px;
   }
 
-  section {
-    padding: 70px 20px;
+  .nav-links a {
+    font-size: 0.75rem;
   }
 
   #hero {
-    min-height: 75vh;
+    min-height: 80vh;
   }
+
+  .hero-links {
+    flex-wrap: wrap;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+#education {
+  background-color: var(--paper);
+}
+
+.education-item {
+  max-width: 800px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid var(--line);
+}
+
+.education-item h3 {
+  margin: 8px 0;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.education-item p:last-child {
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience-list {
+  max-width: 900px;
+}
+
+.experience-item {
+  padding: 30px 0;
+
+  border-top: 1px solid var(--line);
+}
+
+.experience-item:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.item-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.experience-item h3 {
+  margin-top: 8px;
+
+  font-family: "DM Serif Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.experience-company {
+  margin-bottom: 12px;
+  color: var(--olive);
+}
+
+/* =========================
+   SKILL CATEGORIES
+========================= */
+
+.skill-category {
+  margin-bottom: 35px;
+}
+
+.skill-category h3 {
+  margin-bottom: 12px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }

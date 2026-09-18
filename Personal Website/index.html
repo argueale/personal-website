@@ -3,95 +3,306 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Alex | Electrical Engineering</title>
+
+    <meta
+      name="description"
+      content="Alex's personal portfolio — electrical engineering, electronics, robotics, and creative projects."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
     <header>
       <nav>
-        <a href="#">Alex</a>
+        <a href="#" class="logo"> ALEX / EE </a>
 
-        <div>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
+      <!-- =========================
+             HERO
+        ========================== -->
+
       <section id="hero">
-        <h1>Alex's Portfolio</h1>
-
-        <h2>Electrical Engineering Student</h2>
-
-        <p>
-          I build things at the intersection of electronics, software, and
-          robotics.
+        <p class="hero-label">
+          Electrical Engineering · University of Pennsylvania
         </p>
 
-        <a href="#projects"> View My Projects </a>
+        <h1>Alex.</h1>
+
+        <p class="hero-subtitle">
+          Electrical engineering student building things with hardware,
+          software, and curiosity.
+        </p>
+
+        <p class="hero-description">
+          A short introduction will go here. This will eventually become your
+          personal one-to-two sentence statement.
+        </p>
+
+        <div class="hero-links">
+          <a href="#projects"> View Projects </a>
+
+          <a href="#contact"> Contact </a>
+        </div>
       </section>
+
+      <!-- =========================
+             ABOUT
+        ========================== -->
 
       <section id="about">
-        <h2>About Me</h2>
+        <p class="section-label">01 / About</p>
 
-        <p>
-          I'm an Electrical Engineering student at the University of
-          Pennsylvania interested in robotics, embedded systems, electronics,
-          and software.
-        </p>
+        <h2>A little about me.</h2>
+
+        <div class="about-content">
+          <p>
+            I'm an engineering student interested in understanding how things
+            work and then figuring out how to build them. My interests span
+            electronics, software, robotics, and physical systems.
+          </p>
+
+          <p>
+            Outside of engineering, I spend time on creative projects,
+            collaboration, and activities that let me work with people in a
+            completely different way.
+          </p>
+
+          <p>
+            This section will eventually become my actual story, including what
+            I'm interested in, what I'm learning, and what I want to build.
+          </p>
+        </div>
       </section>
 
+      <section id="education">
+        <p class="section-label">02 / Education</p>
+
+        <h2>What I'm studying.</h2>
+
+        <div class="education-item">
+          <p class="item-label">2024 — PRESENT</p>
+
+          <h3>University Name</h3>
+
+          <p>Bachelor of Engineering · Electrical Engineering</p>
+
+          <p>
+            Relevant coursework, concentration, academic interests, or other
+            information can go here.
+          </p>
+        </div>
+      </section>
+
+      <!-- =========================
+             PROJECTS
+        ========================== -->
+
       <section id="projects">
-        <h2>Projects</h2>
+        <p class="section-label">02 / Projects</p>
 
-        <div>
-          <article>
-            <h3>Project 1</h3>
+        <h2>Things I've built.</h2>
 
-            <p>Project description coming soon.</p>
+        <div class="project-grid">
+          <!-- PROJECT TEMPLATE -->
+
+          <article class="project-card">
+            <div>
+              <p class="project-number">PROJECT 01</p>
+
+              <h3>Project Title</h3>
+
+              <p>
+                Short description of the project, what you built, and what
+                problem it addresses.
+              </p>
+
+              <div class="project-tags">
+                <span>Arduino</span>
+                <span>C++</span>
+                <span>Electronics</span>
+              </div>
+            </div>
           </article>
 
-          <article>
-            <h3>Project 2</h3>
+          <!-- PROJECT TEMPLATE -->
 
-            <p>Project description coming soon.</p>
+          <article class="project-card">
+            <div>
+              <p class="project-number">PROJECT 02</p>
+
+              <h3>Project Title</h3>
+
+              <p>Short description of the project.</p>
+
+              <div class="project-tags">
+                <span>Python</span>
+                <span>Hardware</span>
+              </div>
+            </div>
           </article>
 
-          <article>
-            <h3>Project 3</h3>
+          <!-- PROJECT TEMPLATE -->
 
-            <p>Project description coming soon.</p>
+          <article class="project-card">
+            <div>
+              <p class="project-number">PROJECT 03</p>
+
+              <h3>Project Title</h3>
+
+              <p>Short description of the project.</p>
+
+              <div class="project-tags">
+                <span>Coming Soon</span>
+              </div>
+            </div>
           </article>
         </div>
       </section>
 
-      <section id="skills">
-        <h2>Skills</h2>
+      <!-- =========================
+             EXPERIENCE
+        ========================== -->
 
-        <ul>
-          <li>Python</li>
-          <li>Java</li>
-          <li>OCaml</li>
-          <li>Arduino</li>
-          <li>Git</li>
-        </ul>
+      <section id="experience">
+        <p class="section-label">04 / Experience</p>
+
+        <h2>Where I've worked.</h2>
+
+        <div class="experience-list">
+          <article class="experience-item">
+            <p class="item-label">2026 — PRESENT</p>
+
+            <h3>Position Title</h3>
+
+            <p class="experience-company">Organization Name</p>
+
+            <p>
+              Brief description of responsibilities, contributions, or things
+              learned.
+            </p>
+          </article>
+
+          <article class="experience-item">
+            <p class="item-label">2025 — 2026</p>
+
+            <h3>Position Title</h3>
+
+            <p class="experience-company">Organization Name</p>
+
+            <p>
+              Brief description of responsibilities, contributions, or things
+              learned.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section id="contact">
-        <h2>Contact</h2>
+      <!-- =========================
+             SKILLS
+        ========================== -->
 
-        <p>
-          <a href="mailto:alex2rgueta@gmail.com"> Email </a>
+      <section id="skills">
+        <p class="section-label">05 / Skills</p>
+
+        <h2>Things I work with.</h2>
+
+        <div class="skill-category">
+          <h3>Programming</h3>
+
+          <ul class="skills-list">
+            <li>Python</li>
+            <li>Java</li>
+            <li>C / C++</li>
+            <li>OCaml</li>
+            <li>JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Engineering</h3>
+
+          <ul class="skills-list">
+            <li>Arduino</li>
+            <li>Circuit Analysis</li>
+            <li>PCB Design</li>
+            <li>CAD</li>
+            <li>Signal Processing</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3>Tools</h3>
+
+          <ul class="skills-list">
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>VS Code</li>
+            <li>MATLAB</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- =========================
+             CONTACT
+        ========================== -->
+
+      <section id="contact">
+        <p class="section-label">06 / Contact</p>
+
+        <p class="contact-text">
+          Have a project, opportunity, or just want to talk? Get in touch.
         </p>
+
+        <div class="contact-links">
+          <a href="mailto:alex2rgueta@gmail.com"> Email </a>
+
+          <a
+            href="https://github.com/argueale"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/alex-argueta-/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
       </section>
     </main>
 
     <footer>
-      <p>© 2026 Alex</p>
+      <p>© 2026 Alex — Built from scratch.</p>
     </footer>
   </body>
 </html>
