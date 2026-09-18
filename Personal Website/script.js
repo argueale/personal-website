@@ -7,6 +7,10 @@ const navLinks = document.querySelector(".nav-links");
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("nav-open");
+
+  const isOpen = navLinks.classList.contains("nav-open");
+
+  menuToggle.setAttribute("aria-expanded", isOpen);
 });
 
 // Close mobile menu after clicking a link

@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Alex | Electrical Engineering</title>
+    <title>Alex | Electrical Engineering & Projects</title>
 
     <meta
       name="description"
       content="Alex's personal portfolio — electrical engineering, electronics, robotics, and creative projects."
     />
+
+    <meta property="og:title" content="Alex | Electrical Engineering" />
+
+    <meta
+      property="og:description"
+      content="Electrical engineering, electronics, robotics, and creative projects."
+    />
+
+    <meta property="og:type" content="website" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,10 +38,16 @@
     ========================== -->
 
     <header>
-      <nav>
+      <nav aria-label="Main navigation">
         <a href="#" class="logo"> ALEX / EE </a>
 
-        <button class="menu-toggle" aria-label="Open navigation">☰</button>
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
 
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
@@ -138,11 +153,13 @@
             <div>
               <p class="project-number">PROJECT 01</p>
 
+              <div class="project-image">IMAGE COMING SOON</div>
+
               <h3>Project Title</h3>
 
               <p>
-                Short description of the project, what you built, and what
-                problem it addresses.
+                Brief explanation of the project, what you built, and the
+                engineering problem you were trying to solve.
               </p>
 
               <div class="project-tags">
@@ -151,6 +168,8 @@
                 <span>Electronics</span>
               </div>
             </div>
+
+            <a href="#" class="project-link"> View Project → </a>
           </article>
 
           <!-- PROJECT TEMPLATE -->
@@ -159,15 +178,22 @@
             <div>
               <p class="project-number">PROJECT 02</p>
 
+              <div class="project-image">IMAGE COMING SOON</div>
+
               <h3>Project Title</h3>
 
-              <p>Short description of the project.</p>
+              <p>
+                Brief explanation of the project, what you built, and the
+                engineering problem you were trying to solve.
+              </p>
 
               <div class="project-tags">
                 <span>Python</span>
                 <span>Hardware</span>
               </div>
             </div>
+
+            <a href="#" class="project-link"> View Project → </a>
           </article>
 
           <!-- PROJECT TEMPLATE -->
@@ -176,14 +202,21 @@
             <div>
               <p class="project-number">PROJECT 03</p>
 
+              <div class="project-image">IMAGE COMING SOON</div>
+
               <h3>Project Title</h3>
 
-              <p>Short description of the project.</p>
+              <p>
+                Brief explanation of the project, what you built, and the
+                engineering problem you were trying to solve.
+              </p>
 
               <div class="project-tags">
                 <span>Coming Soon</span>
               </div>
             </div>
+
+            <a href="#" class="project-link"> View Project → </a>
           </article>
         </div>
       </section>

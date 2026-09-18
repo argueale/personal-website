@@ -225,7 +225,7 @@ nav {
 }
 
 .project-card {
-  min-height: 300px;
+  min-height: 500px;
 
   display: flex;
   flex-direction: column;
@@ -500,6 +500,40 @@ main section.visible {
 }
 
 /* =========================
+   PROJECTS
+========================= */
+
+.project-image {
+  height: 180px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 25px 0;
+
+  background-color: #e7e3d9;
+  border: 1px solid var(--line);
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.project-link {
+  margin-top: 25px;
+
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+
+  text-decoration: none;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
    EXPERIENCE
 ========================= */
 
@@ -551,4 +585,24 @@ main section.visible {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
 }
